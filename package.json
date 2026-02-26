@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Self-healing test automation engine. When your UI changes, your tests fix themselves.",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "import": "./dist/esm/index.js",
       "types": "./dist/index.d.ts"
     }
   },
