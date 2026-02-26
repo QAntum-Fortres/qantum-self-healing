@@ -1,0 +1,81 @@
+{
+  "name": "@qantum/self-healing",
+  "version": "1.0.0",
+  "description": "Self-healing test automation engine. When your UI changes, your tests fix themselves.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "ts-node demo/basic.ts",
+    "demo:ai": "ts-node demo/with-ollama.ts",
+    "demo:playwright": "ts-node demo/playwright-example.ts",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "self-healing",
+    "test-automation",
+    "playwright",
+    "selenium",
+    "cypress",
+    "qa",
+    "testing",
+    "ai",
+    "ollama",
+    "typescript",
+    "selector",
+    "healing",
+    "automation"
+  ],
+  "author": {
+    "name": "Dimitar Prodromov",
+    "email": "papica777@gmail.com",
+    "url": "https://www.linkedin.com/in/qantum/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QAntum-Fortres/qantum-self-healing.git"
+  },
+  "homepage": "https://aeterna.website",
+  "bugs": {
+    "url": "https://github.com/QAntum-Fortres/qantum-self-healing/issues"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.30.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
