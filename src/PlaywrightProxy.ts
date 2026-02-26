@@ -39,6 +39,18 @@ export function createHealingProxy(page: PlaywrightPage): PlaywrightPage {
         // Ignore — we'll heal without element context
       }
 
+      // Initialize from options if provided
+      const userOptions = args.length > 0 ? args[args.length - 1] : {};
+      if (!element && userOptions && (userOptions.qantumTargetText || userOptions.qantumRole)) {
+        element = {
+          tag: userOptions.qantumRole || 'any',
+          text: userOptions.qantumTargetText,
+          classes: [],
+          attributes: {},
+          path: ''
+        };
+      }
+
       const failure: FailureContext = {
         testId: `proxy-${Date.now()}`,
         testName: `${method}(${selector})`,
@@ -121,7 +133,7 @@ async function extractElementContext(
       if (rect.width === 0 && rect.height === 0) return null;
 
       const attrs: Record<string, string> = {};
-      for (const attr of Array.from(el.attributes)) {
+      for (const attr of Array.from(el.attributes) as any[]) {
         attrs[attr.name] = attr.value;
       }
 

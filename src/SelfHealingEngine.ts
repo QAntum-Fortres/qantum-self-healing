@@ -21,7 +21,8 @@ const selectorNotFoundStrategy: HealingStrategy = {
   priority: 1,
   canHeal: (f) =>
     f.errorType === 'ElementNotFoundError' ||
-    /element not found|no element|selector/i.test(f.error),
+    f.errorType === 'TimeoutError' ||
+    /element not found|no element|selector|locator/i.test(f.error),
   heal: async (f) => {
     if (!f.element) {
       return { healed: false, strategy: 'SelectorNotFound', confidence: 0, explanation: 'No element context', shouldSave: false };

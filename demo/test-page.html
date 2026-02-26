@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAntum Self-Healing Sandbox</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; padding: 50px; text-align: center; }
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        .glass-btn:hover { background: rgba(255,255,255,0.2); }
+    </style>
+</head>
+<body>
+    <h1>Aeterna.website Simulation</h1>
+    <p>We are simulating a UI change where an ID was removed by a developer.</p>
+    <!-- Истинският бутон, който вече НЯМА ID -->
+    <!-- Self-Healing Engine ще го намери по текст и таг! -->
+    <button class="glass-btn">START</button>
+
+    <script>
+        document.querySelector('.glass-btn').addEventListener('click', () => {
+            document.body.innerHTML += '<h2 style="color:#00ffcc">✅ SYSTEM IGNITED!</h2>';
+            console.log('BUTTON CLICKED SUCCESFULLY');
+        });
+    </script>
+</body>
+</html>

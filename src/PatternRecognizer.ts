@@ -22,7 +22,8 @@ export type PatternType =
   | 'dependency'
   | 'timing'
   | 'data'
-  | 'environment';
+  | 'environment'
+  | 'timeout';
 
 export interface PatternMatch {
   pattern: Pattern;
@@ -79,7 +80,7 @@ export class FeatureExtractor {
       /concurrent|race/i,
       /database|sql/i,
     ];
-    const features = checks.map((r) => (r.test(message) ? 1 : 0));
+    const features: number[] = checks.map((r) => (r.test(message) ? 1 : 0));
     features.push(Math.min(message.length / 1000, 1));
     features.push(Math.min(message.split('\n').length / 50, 1));
     return features;
