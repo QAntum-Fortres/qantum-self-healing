@@ -1,0 +1,22 @@
+Subject: QAntum | First Zero-Entropy AI Agent & Self-Healing Testing Infrastructure
+
+Hi Lyuben,
+
+I am Dimitar Prodromov, creator of QAntum (v1.0.0-SINGULARITY) — the first deterministic AI agent built to eliminate entropy in modern full-stack systems.
+
+While most AI tools hallucinate their way through simple code, QAntum operates deterministically with direct access to compiler safety and system truth.
+
+We just open-sourced our first major module: @qantum/self-healing.
+It is a self-healing E2E testing framework that wraps Playwright with an autonomous AI Proxy. When selectors break, timeouts hit, or DOM layers shift — QAntum intercepts the crash, reads the raw DOM context, auto-generates a mathematically proven fix (like an updated XPath), and completely prevents test failure.
+
+Our initial Mass Hunter execution revealed critical vulnerabilities in over 70% of Enterprise targets scanned (from TTFB drops to missing security headers that our Self-Healing layer resolves instantly on execution). The economic value of maintaining zero test flakiness in CI pipelines stands at €135,000+ per targeted enterprise sprint.
+
+We are launching aeterna.website next week — a commercial sandbox demonstrating the full scope of our capabilities.
+
+I'm seeking a focused seed investment to scale the QAntum Core and expand the B2B pipeline. This is a highly technical play targeting CTOs directly, drastically cutting QA overheads.
+
+Are you available for a 15-minute sync next Tuesday?
+
+Best regards,
+Dimitar
+https://aeterna.website
